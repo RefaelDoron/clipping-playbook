@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      (function () {
+        var base = "/clipping-playbook";
+        var path = location.pathname;
+        var rest = path.indexOf(base) === 0 ? path.slice(base.length) : path;
+        rest = rest.replace(/^\/+/, "").replace(/\/?(index\.html)?$/, "");
+        if (rest === "404.html") rest = "";
+        var hash = rest ? "#/" + rest : "#/";
+        location.replace(base + "/" + hash + location.search);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the playbook…</p>
+  </body>
+</html>
